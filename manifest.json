@@ -9,5 +9,16 @@
       "matches": ["<all_urls>"],
       "js": ["convert-x-to-y.js"]
     }
-  ]
+  ],
+
+  "browser_action": {
+    "default_title": "Enable X to Y"
+  },
+
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  }
 }

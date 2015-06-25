@@ -22,4 +22,10 @@ var replaceText = function (x, y, node) {
   }
 };
 
-replaceText("Google", "Something", document.body);
+chrome.runtime.onMessage.addListener(function (message) {
+  if (message.type == "replacement") {
+    replaceText(message.x, message.y, document.body);
+  }
+});
+
+chrome.runtime.sendMessage({ type: "requestReplacements" });

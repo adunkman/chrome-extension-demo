@@ -2,5 +2,12 @@
   "version": "0.0.0",
   "name": "x to y",
   "description": "It’s like cloud butts!",
-  "manifest_version": 2
+  "manifest_version": 2,
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["convert-x-to-y.js"]
+    }
+  ]
 }
